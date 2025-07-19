@@ -135,3 +135,4 @@ function goBack() {
   document.getElementById("gameFrame").src = "";
   document.getElementById("paperGrid").classList.remove("hidden");
 }
+
