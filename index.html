@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EduVault Revision</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>EduVault Revision</h1>
+    <nav>
+      <ul>
+        <li><button id="homeBtn" class="nav-btn">Home</button></li>
+        <li><button id="pastPapersBtn" class="nav-btn">Past Papers</button></li>
+        <li class="dropdown-parent">
+          <button id="markschemesBtn" class="nav-btn">Mark Schemes ▾</button>
+          <ul id="markschemesDropdown" class="dropdown hidden">
+            <li><a href="https://www.aqa.org.uk/find-past-papers-and-mark-schemes" target="_blank" rel="noopener noreferrer">English Language</a></li>
+            <li><a href="https://www.aqa.org.uk/find-past-papers-and-mark-schemes" target="_blank" rel="noopener noreferrer">Mathematics</a></li>
+            <li><a href="https://www.aqa.org.uk/find-past-papers-and-mark-schemes" target="_blank" rel="noopener noreferrer">Combined Science</a></li>
+            <li><a href="https://www.aqa.org.uk/find-past-papers-and-mark-schemes" target="_blank" rel="noopener noreferrer">History</a></li>
+          </ul>
+        </li>
+        <li><button id="resourcesBtn" class="nav-btn">Resources</button></li>
+        <li><button id="loginToggle" class="nav-btn">Login</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Homepage Section -->
+    <section id="homeSection" class="home-section">
+      <h2>Welcome to <span class="highlight">EduVault Revision</span></h2>
+      <p>Your trusted site for past papers and revision material! </p>
+      <button id="startBtn" class="primary-btn">Start Revising</button>
+    </section>
+
+    <!-- Past Papers Grid -->
+    <section id="paperGrid" class="hidden">
+      <h2>Past Papers</h2>
+      <div class="grid-items">
+        <div class="paper" onclick="loadGame('https://html5.gamemonetize.co/9km7avlf26r9se5gam8028uq4p6drmx1/')">Survival Race</div>
+        <div class="paper" onclick="loadGame('https://html5.gamemonetize.co/vcecgonbw7uvc92nrt8xgwx9meouuqtz/')">Offroad Motocross</div>
+        <div class="paper" onclick="loadGame('https://html5.gamemonetize.co/d8vjyjtwgj1c7opsa1e99ifmvnfvgvn8/')">Super Motocross</div>
+        <div class="paper" onclick="loadGame('https://html5.gamemonetize.co/3vfcposqhcqxry8lugoqadmdpteoae3v/')">Police Chase 2</div>
+        <div class="paper" onclick="loadGame('https://html5.gamemonetize.co/945qahpnpg3byb5h074n2zj2vlwxy8bn/')">Obstacube</div>
+        <div class="paper" onclick="loadGame('https://html5.gamemonetize.co/vpyg4xx30zcxx3sv2p8ke2ws7bvwg08v/')">Night Streetracer</div>
+        <div class="paper" onclick="loadGame('https://html5.gamemonetize.co/jds9ej3vwf8h30jmk1bygwu01piagt63/')">Vex</div>
+        <div class="paper" onclick="loadGame('https://html5.gamemonetize.co/qsd2h427rg6z6gza2xekqsdwgk1dwksa/')">Stickman Ghost</div>
+        <div class="paper" onclick="loadGame('https://html5.gamemonetize.co/ff4tqw2853v969d00ybkce8p8fvs8ogm/')">Roblox Craft Run</div>
+        <div class="paper" onclick="loadGame('https://html5.gamemonetize.co/45v5yuzz9v0iqa8wf0c9x6veyypmg46z/')">Ping Pong</div>
+        <div class="paper" onclick="loadGame('https://html5.gamemonetize.co/ycc9yyyfyazoiibce061j1b7jx91tt8a/')">BasketBros</div>
+        <div class="paper" onclick="loadGame('https://html5.gamemonetize.co/31e95dommfqc3ktoz7x5pzuegah3vo8y/')">Penalty Challenge 21</div>
+        <div class="paper" onclick="loadGame('https://html5.gamemonetize.co/jar8i1jwd21n874enkjd3rmdcvkmm763/')">Rolling Ball Game</div>
+        <div class="paper" onclick="loadGame('https://html5.gamemonetize.co/qwbxn016a0o7rj95avjlj54c08r0gj5j/')">Balls VS Lazers</div>
+        <div class="paper" onclick="loadGame('https://html5.gamemonetize.co/v4hz9wmqunchapevb1msrjdrc39f3csy/')">Snowball.io</div>
+        <div class="paper" onclick="loadGame('https://html5.gamemonetize.co/snrww5vdb2fpx6ivtwdvfwgxx35wtigm/')">Minigolf Master</div>
+        <div class="paper" onclick="loadGame('https://html5.gamemonetize.co/91bpo9c0m4i3jhc89iaes8sbr2wdf7h8/')">Marble Spiral</div>
+        <div class="paper" onclick="loadGame('https://html5.gamemonetize.co/3n1k20ccttp0hvvr6ox2b41a8ibha9x3/')">Soccer Random</div>
+        <div class="paper" onclick="loadGame('https://html5.gamemonetize.co/p4pa453tundv6gm5t1af3633vq0nay9r/')">Boxing Random</div>
+        <div class="paper" onclick="loadGame('https://html5.gamemonetize.co/h70hk41lfd8ytt1c8lem2n4u00m28t8q/')">Volleyball Random</div>
+        <div class="paper" onclick="loadGame('https://html5.gamemonetize.co/ikv6tvl28r0jhq0r003pcv0lhh6ckpr1/')">Block Merge City</div>
+      </div>
+    </section>
+
+    <!-- Game Viewer Section -->
+    <section id="gameViewer" class="hidden">
+      <button class="back-btn" onclick="goBack()">← Back to Past Papers</button>
+      <div id="loader">Loading game, please wait...</div>
+      <iframe
+        id="gameFrame"
+        src=""
+        width="800"
+        height="600"
+        scrolling="none"
+        frameborder="0"
+        allowfullscreen
+        style="display:none"
+      ></iframe>
+    </section>
+
+    <!-- Resources List -->
+    <section id="resourcesList" class="hidden">
+      <h2>Useful Revision Resources</h2>
+      <ul class="resources">
+        <li><a href="https://www.bbc.co.uk/bitesize" target="_blank" rel="noopener noreferrer">BBC Bitesize</a></li>
+        <li><a href="https://revisionworld.com" target="_blank" rel="noopener noreferrer">Revision World</a></li>
+        <li><a href="https://senecalearning.com" target="_blank" rel="noopener noreferrer">Seneca Learning</a></li>
+        <li><a href="https://www.quizlet.com" target="_blank" rel="noopener noreferrer">Quizlet</a></li>
+        <li><a href="https://www.futurelearn.com/courses" target="_blank" rel="noopener noreferrer">FutureLearn Courses</a></li>
+      </ul>
+    </section>
+
+    <!-- Fake Login Screen -->
+    <section id="loginScreen" class="hidden">
+      <h2>Login to EduVault</h2>
+      <input id="username" type="text" placeholder="Username" autocomplete="off" />
+      <input id="password" type="password" placeholder="Password" autocomplete="off" />
+      <button id="loginBtn" class="primary-btn">Login</button>
+      <p id="loginError" class="error-text"></p>
+      <button id="backHomeBtn" class="secondary-btn">Back to Home</button>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 EduVault. All rights reserved.
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
