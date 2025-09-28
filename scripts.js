@@ -136,3 +136,21 @@ function goBack() {
   document.getElementById("paperGrid").classList.remove("hidden");
 }
 
+// Fullscreen button support
+document.addEventListener("DOMContentLoaded", () => {
+  const fullscreenBtn = document.getElementById("fullscreenBtn");
+  const gameFrame = document.getElementById("gameFrame");
+
+  fullscreenBtn.addEventListener("click", () => {
+    if (gameFrame.requestFullscreen) {
+      gameFrame.requestFullscreen();
+    } else if (gameFrame.mozRequestFullScreen) { // Firefox
+      gameFrame.mozRequestFullScreen();
+    } else if (gameFrame.webkitRequestFullscreen) { // Chrome, Safari
+      gameFrame.webkitRequestFullscreen();
+    } else if (gameFrame.msRequestFullscreen) { // IE/Edge
+      gameFrame.msRequestFullscreen();
+    }
+  });
+});
+
