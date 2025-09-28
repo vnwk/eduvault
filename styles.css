@@ -347,3 +347,21 @@ footer {
   user-select: none;
   letter-spacing: 0.06em;
 }
+
+
+/* Game container layout */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#gameFrame {
+  max-width: 100%;
+  border-radius: 14px;
+  border: 2px solid #83b683;
+  box-shadow: 0 15px 40px rgba(131, 182, 131, 0.5);
+  margin-bottom: 1rem;
+}
+
